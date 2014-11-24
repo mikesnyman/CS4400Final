@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="form" class="container">
+    All participant accounts would have this characteristics profile.  This is the general set of questions the admin can set to help researchers filter participants for studys. </br></br>
+
+    @Html.Label("Male or Female?")</br>
+    @Html.RadioButton("Gender", false) Female </br>
+    @Html.RadioButton("Gender", false) Male </br></br>
+
+    @Html.Label("Are you currently married?")</br>
+    @Html.RadioButton("Marriage", false) Yes </br>
+    @Html.RadioButton("Marriage", false) No </br></br>
+
+    @Html.Label("How many kids do you have?")</br>
+    @Html.RadioButton("Marriage", false) 0 </br>
+    @Html.RadioButton("Marriage", false) 1 </br>
+    @Html.RadioButton("Marriage", false) 2 </br>
+    @Html.RadioButton("Marriage", false) 3+ </br></br>
+
+    @Html.Label("Have you been divorced")</br>
+    @Html.RadioButton("Divorced", false) Yes </br>
+    @Html.RadioButton("Divorced", false) No </br></br>
+
+    @Html.Label("Are you left handed or right handed?")</br>
+    @Html.RadioButton("Hand", false) Left </br>
+    @Html.RadioButton("Hand", false) Right </br></br>
+   
+    @Html.Label("What college level are you?")</br>
+    @Html.RadioButton("College", false) Freshman </br>
+    @Html.RadioButton("College", false) Junior </br>
+    @Html.RadioButton("College", false) Softmore </br>
+    @Html.RadioButton("College", false) Senior </br></br>
+
+    @Html.Label("What college level are you?")</br>
+    @Html.RadioButton("College", false) Freshman </br>
+    @Html.RadioButton("College", false) Junior </br>
+    @Html.RadioButton("College", false) Softmore </br>
+    @Html.RadioButton("College", false) Senior </br></br>
+
+
+    <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-primary">Save </a> </br>
+    <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-primary">Cancel </a> </br>
+    
+</div>

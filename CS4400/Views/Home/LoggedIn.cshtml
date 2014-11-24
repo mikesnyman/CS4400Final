@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <a href="@Url.Action("Characteristics", "Participant")" class="btn btn-default">My Characteristics Profile</a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Create/Edit Surveys</a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <a href="@Url.Action("CreateAccount", "Admin")" class="btn btn-default">Create Accounts</a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Create</a>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+@*<div id="main">
+        @RenderBody()
+    </div>*@
+( Filter Surveys this account can participate in because they match the researchers filter questions:)
+<h3>Questionares to see if you qualify for this study:</h3>
+<ol class="round">
+    <li class="one">
+        <a href="@Url.Action("LoggedIn", "Home")" class="btn-link">Can You Read Minds?</a>
+    </li>
+
+    <li class="two">
+        <a href="@Url.Action("LoggedIn", "Home")" class="btn-link">Can you talk with animals?</a>
+      </li>
+
+    <li class="three">
+        <a href="@Url.Action("LoggedIn", "Home")" class="btn-link">Do you dream of flying?</a>
+     </li>
+</ol>

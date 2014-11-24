@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="form" class="container">
+    @Html.Label("Survey Name Example")</br>
+    @Html.TextBox("Survey Name")   Question Name  @Html.Label("Select Correct Answer")</br>
+    @Html.TextBox("Survey Name")   Potential Answer 1  @Html.RadioButton("answers", false)</br>
+    @Html.TextBox("Survey Name")   Potential Answer 2  @Html.RadioButton("answers", false)</br>
+    @Html.TextBox("Survey Name")   Potential Answer 3  @Html.RadioButton("answers", false)</br>
+    @Html.TextBox("Survey Name")   Potential Answer 4  @Html.RadioButton("answers", false)</br>
+    <a href="@Url.Action("Index", "Researcher")" class="btn btn-primary">Save</a>
+    <a href="@Url.Action("Index", "Researcher")" class="btn btn-primary">Cancel</a>
+</div>

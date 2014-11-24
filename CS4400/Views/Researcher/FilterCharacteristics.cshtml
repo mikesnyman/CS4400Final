@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="form" class="container">
+
+    @Html.Label("Filter Settings for Example Study") </br>(Select the answers you want to filter participants with.  Select the check box if any answer is applicable.  Selections will allow participants with that characteristic to participate (not exclude)) </br></br>
+    @Html.Label("Male or Female?")  @Html.CheckBox("Genders")</br>
+    @Html.RadioButton("Gender", false) Female </br>
+    @Html.RadioButton("Gender", false) Male </br></br>
+
+    @Html.Label("Are you married?") @Html.CheckBox("Genders")</br>
+    @Html.RadioButton("Marriage", false) Yes </br>
+    @Html.RadioButton("Marriage", false) No </br></br>
+
+    @Html.Label("Have you been divorced") @Html.CheckBox("Genders")</br>
+    @Html.RadioButton("Divorced", false) Yes </br>
+    @Html.RadioButton("Divorced", false) No </br></br>
+
+    @Html.Label("Are you left handed or right handed?") @Html.CheckBox("Genders")</br>
+    @Html.RadioButton("Hand", false) Left </br>
+    @Html.RadioButton("Hand", false) Right </br></br>
+   
+    @Html.Label("What college level are you?") @Html.CheckBox("Genders")</br>
+    @Html.RadioButton("College", false) Freshman </br>
+    @Html.RadioButton("College", false) Junior </br>
+    @Html.RadioButton("College", false) Softmore </br>
+    @Html.RadioButton("College", false) Senior </br></br>
+
+    @Html.Label("What college level are you?") @Html.CheckBox("Genders")</br>
+    @Html.RadioButton("College", false) Freshman </br>
+    @Html.RadioButton("College", false) Junior </br>
+    @Html.RadioButton("College", false) Softmore </br>
+    @Html.RadioButton("College", false) Senior </br></br>
+
+
+    <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-primary">Save Answers</a> </br>
+    
+</div>

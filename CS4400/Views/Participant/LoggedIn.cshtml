@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Create Survey</a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <a href="@Url.Action("Characteristics", "Participant")" class="btn btn-default">Characteristics Profile</a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <a href="@Url.Action("Permissions", "Admin")" class="btn btn-default">Create Account</a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Create</a>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+@*<div id="main">
+        @RenderBody()
+    </div>*@
+<h3>Filter Surveys to participate in study:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Can you read minds?</h5>
+        Link to survey filter questionare within this site.
+    </li>
+
+    <li class="two">
+        <h5>Can you communicate with dogs?</h5>
+        Link to survey filter questionare within this site.    
+      </li>
+
+    <li class="three">
+        <h5>Are you a skinwalker or have associated with one?</h5>
+        Link to survey filter questionare within this stie.
+     </li>
+</ol>

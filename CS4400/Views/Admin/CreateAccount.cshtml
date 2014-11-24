@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        @Html.TextBox("Username") Username 
+        @Html.TextBox("Password") Password </br>
+        @Html.TextBox("PasswordConfirm") Confirm Password </br>
+        @Html.TextBox("Email") Email </br></br>
+        Admin @Html.RadioButton("Level",false)
+        Researcher @Html.RadioButton("Level", false) 
+        Teacher @Html.RadioButton("Level", false) </br>
+        <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Save</a></br>
+        <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Cancel</a>
+    </div>
+</div>

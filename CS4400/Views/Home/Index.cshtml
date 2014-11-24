@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1><a href="https://uvu.edu/besc/">UVU</a></h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                In order to participate in a study organized within the Behavioral science department you will need to create a profile.<br />  
+                All information provided is strictly kept within the department and is not shared. <br />
+            </p>
+        </div>
+    </section>
+}
+
+<div class="container">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        @Html.TextBox("Username") Username 
+        @Html.TextBox("Password") Password </br>
+        <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Submit</a></br>
+        <a href="@Url.Action("CreateAccount", "Home")" class="btn btn-default">Create Account</a>
+    </div>
+</div>
