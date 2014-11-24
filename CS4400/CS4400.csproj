@@ -323,7 +323,6 @@
     <Content Include="Views\Home\LoggedIn.cshtml" />
     <Content Include="Views\Teacher\_StudentList.cshtml" />
     <Content Include="Views\Researcher\Index.cshtml" />
-    <Content Include="Views\Home\_surveyList.cshtml" />
     <Content Include="Views\Participant\Characteristics.cshtml" />
     <Content Include="Views\Researcher\Question.cshtml" />
     <Content Include="Views\Participant\LoggedIn.cshtml" />
