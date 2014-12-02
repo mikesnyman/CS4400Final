@@ -1,10 +1,9 @@
-﻿@model CS4400.Models.RegisterModel
+﻿@model CS4400.Models.RegisterUserViewModel
 @{
     ViewBag.Title = "Register";
 }
 
 <hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
     <h2>Create a new account.</h2>
 </hgroup>
 
@@ -16,8 +15,8 @@
         <legend>Registration Form</legend>
         <ol>
             <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username)
             </li>
             <li>
                 @Html.LabelFor(m => m.Password)

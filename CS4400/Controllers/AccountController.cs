@@ -13,6 +13,99 @@ using CS4400.Models;
 
 namespace CS4400.Controllers
 {
+
+    public class AccountController : Controller
+    {
+        public ActionResult Login(string returnUrl)
+        {
+            var vm = new LoginUserViewModel();
+            vm.ReturnUrl = returnUrl;
+            return View(vm);
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginUserViewModel vm)
+        {
+            /*
+            using (var uow = new CS4400.Data.IUnitOfWork) 
+            {
+                var user = uow.Users.GetAll().FirstOrDefault(u => u.Username == vm.Username);
+                if (user != null) 
+                {
+                    if (user.PasswordHash == AccountHelper.HashPassword(vm.Password)) 
+                    {
+                        AccountHelper.Login(vm.Username);
+
+                        if (!string.IsNullOrEmpty(vm.ReturnUrl)) 
+                        {
+                            return Redirect(vm.ReturnUrl);
+                        }
+                        else 
+                        {
+                            return RedirectToAction("LoggedIn", "Home");
+                        }
+                    }
+                }
+            }
+            */
+
+            if (vm.Username == "test" && vm.Password == "now")
+            {
+                return RedirectToAction("LoggedIn", "Home");
+            }
+
+            // If we got this far, something failed, redisplay form
+            ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            return View(vm);
+        }
+        //}
+
+        public ActionResult Register(string returnUrl)
+        {
+            var vm = new RegisterUserViewModel();
+            vm.ReturnUrl = returnUrl;
+            return View(vm);
+        }
+
+        [HttpPost]
+        public ActionResult Register(RegisterUserViewModel vm)
+        {
+            if (vm.Username == "test")
+            {
+                return RedirectToAction("LoggedIn", "Home");
+            }
+
+            // If we got this far, something failed, redisplay form
+            ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            return View(vm);
+        }
+    }
+}
+     /*
+        using (var uow = new CS4400.Data.IUnitOfWork) 
+        {
+            var user = uow.Users.GetAll().FirstOrDefault(u => u.Username == vm.Username);
+            if (user != null) 
+            {
+                if (user.PasswordHash == AccountHelper.HashPassword(vm.Password)) 
+                {
+                    AccountHelper.Login(vm.Username);
+
+                    if (!string.IsNullOrEmpty(vm.ReturnUrl)) 
+                    {
+                        return Redirect(vm.ReturnUrl);
+                    }
+                    else 
+                    {
+                        return RedirectToAction("LoggedIn", "Home");
+                    }
+                }
+            }
+        }
+        */
+
+    
+    /*
     [Authorize]
     [InitializeSimpleMembership]
     public class AccountController : Controller
@@ -404,4 +497,5 @@ namespace CS4400.Controllers
         }
         #endregion
     }
-}
+    */
+
