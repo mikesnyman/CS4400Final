@@ -11,7 +11,7 @@ using WebMatrix.WebData;
 using CS4400.Filters;
 using CS4400.Models;
 
-namespace CS4400.Controllers
+namespace CS4400.Controllers  
 {
 
     public class AccountController : Controller
