@@ -2,16 +2,30 @@
     ViewBag.Title = "Home Page";
 }
 
+<style type="text/css">
+    input#Level {
+        width: 20px;
+    }
+</style>
+
+<br />
 <div class="container">
-    <div class="col-md-3 col-sm-6 col-xs-12">
-        @Html.TextBox("Username") Username 
-        @Html.TextBox("Password") Password </br>
-        @Html.TextBox("PasswordConfirm") Confirm Password </br>
-        @Html.TextBox("Email") Email </br></br>
-        Admin @Html.RadioButton("Level",false)
-        Researcher @Html.RadioButton("Level", false) 
-        Teacher @Html.RadioButton("Level", false) </br>
-        <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Save</a></br>
+    <div class="col-md-6 col-sm-9 col-xs-12">
+        <p>            
+            @Html.TextBox("Username") Username
+        </p>
+        <p>
+            @Html.Password("Password") Password </br>
+        </p>
+        <p>
+            @Html.Password("PasswordConfirm") Confirm Password </br>
+        </p>
+        @Html.TextBox("Email") Email <br /><br />
+
+         @Html.RadioButton("Level",false)Admin <br />
+         @Html.RadioButton("Level", false)Researcher <br />
+         @Html.RadioButton("Level", false)Teacher <br /><br />
+        <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Save</a>
         <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Cancel</a>
     </div>
 </div>

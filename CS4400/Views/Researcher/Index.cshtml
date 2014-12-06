@@ -1,31 +1,35 @@
 ﻿@{
+    ViewBag.Title = "Create Survey";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+    <div id="form" class="container">
+        (This option only appears in Researcher account. )<br /> <br />
+        <div class="col-md-6 col-sm-3 col-xs-12">
+            @Html.TextBox("Survey Name") <br />  Survey Name <br /><br />
+            <p>
+                <a href="@Url.Action("Question", "Researcher")" class="btn btn-default">Create Question</a>
+                <a href="@Url.Action("FilterCharacteristics", "Researcher")" class="btn btn-default">Set Characteristic Filters</a>
+            </p>
+            <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Save</a>
+            <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Cancel</a> <br />
+        </div>
+    </div>
 
-<div id="form" class="container">
-    (This option only appears in Researcher account. )</br> </br>
-
-    @Html.TextBox("Survey Name")   Survey Name </br>
-    <a href="@Url.Action("Question", "Researcher")" class="btn btn-primary">Create Question</a>
-    <a href="@Url.Action("FilterCharacteristics", "Researcher")" class="btn btn-primary">Set Characteristic Filters</a> </br>
-    <a href="@Url.Action("Index", "Researcher")" class="btn btn-primary">Save</a> 
-    <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-primary">Cancel</a> </br>  
-       
-</div> 
-
-<div>
-    </br></br></br>
-    <strong>List of active filter surveys for this researchers account</strong>
-    <ul>
-        <li>
-            Example filter survey 1  <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Edit</a>
-        </li>
-        <li>
-            Example filter survey 2  <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Edit</a>
-        </li>
-        <li>
-            Example filter survey 3  <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Edit</a>
-        </li>
-    </ul>
-</div>
+    <div>
+        <br /><br /><br />
+        <strong>List of active filter surveys for this researchers account</strong>
+        <ul>
+            <li>
+                Example filter survey 1 &nbsp &nbsp &nbsp &nbsp <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Edit</a>
+            </li>
+            <br />
+            <li>
+                Example filter survey 2 &nbsp &nbsp &nbsp &nbsp <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Edit</a>
+            </li>
+            <br />
+            <li>
+                Example filter survey 3 &nbsp &nbsp &nbsp &nbsp <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Edit</a>
+            </li>
+        </ul>
+    </div>

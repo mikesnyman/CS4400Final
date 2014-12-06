@@ -1,14 +1,21 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
 <div class="container">
     <div class="col-md-3 col-sm-6 col-xs-12">
-        @Html.TextBox("Username") Username 
-        @Html.TextBox("Password") Password <br>
-        @Html.TextBox("PasswordConfirm") Confirm Password <br>
-        @Html.TextBox("Email") Email <br>
-        <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Save</a><br>
+        <p>
+            @Html.TextBox("Username") Username
+        </p> 
+        <p>
+            @Html.Password("Password") Password
+        </p>        
+        <p>
+            @Html.Password("PasswordConfirm") Confirm Password
+        </p>
+        <p>
+            @Html.TextBox("Email") Email
+        </p>
+        <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Save</a>
         <a href="@Url.Action("Index", "Home")" class="btn btn-default">Cancel</a>
     </div>
 </div>

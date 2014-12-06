@@ -2,6 +2,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style type="text/css">
+    input {
+        width: 20px;
+    }
+</style>
+
 <div id="form" class="container">
 
     @Html.Label("Filter Settings for Example Study") </br>(Select the answers you want to filter participants with.  Select the check box if any answer is applicable.  Selections will allow participants with that characteristic to participate (not exclude)) </br></br>
@@ -34,6 +40,6 @@
     @Html.RadioButton("College", false) Senior </br></br>
 
 
-    <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-primary">Save Answers</a> </br>
+    <a href="@Url.Action("LoggedIn", "Home")" class="btn btn-default">Save Answers</a> </br>
     
 </div>

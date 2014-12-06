@@ -1,15 +1,20 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style type="text/css">
+    input#answers {
+        width: 20px;
+    }
+</style>
 
-
-<div id="form" class="container">
-    @Html.Label("Survey Name Example")</br>
-    @Html.TextBox("Survey Name")   Question Name  @Html.Label("Select Correct Answer")</br>
-    @Html.TextBox("Survey Name")   Potential Answer 1  @Html.RadioButton("answers", false)</br>
-    @Html.TextBox("Survey Name")   Potential Answer 2  @Html.RadioButton("answers", false)</br>
-    @Html.TextBox("Survey Name")   Potential Answer 3  @Html.RadioButton("answers", false)</br>
-    @Html.TextBox("Survey Name")   Potential Answer 4  @Html.RadioButton("answers", false)</br>
-    <a href="@Url.Action("Index", "Researcher")" class="btn btn-primary">Save</a>
-    <a href="@Url.Action("Index", "Researcher")" class="btn btn-primary">Cancel</a>
+<div id="form" class="container col-md-6 col-sm-9 col-xs-12">
+    @Html.Label("Survey Name Example")<br /><br />
+    @Html.TextBox("Survey Name")  <br /> Question Name <br /><br /> 
+    @Html.Label("Select Correct Answer")<br />
+    @Html.RadioButton("answers", false)@Html.TextBox("survey name") <br /> &emsp;&emsp; Potential Answer 1  <br /><br />
+    @Html.RadioButton("answers", false)@Html.TextBox("Survey Name")  <br /> &emsp;&emsp; Potential Answer 2 <br /><br />
+@Html.RadioButton("answers", false)@Html.TextBox("Survey Name")  <br /> &emsp;&emsp; Potential Answer 3 <br /><br />
+@Html.RadioButton("answers", false)@Html.TextBox("Survey Name")  <br /> &emsp;&emsp; Potential Answer 4 <br /><br />
+    <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Save</a>
+    <a href="@Url.Action("Index", "Researcher")" class="btn btn-default">Cancel</a>
 </div>
