@@ -61,4 +61,9 @@ namespace CS4400.Models
         public string PotentialAns4 { get; set; }
         public bool Answer { get; set; }
     }
+
+    public class LocalPasswordModel
+    {
+
+    }
 }
