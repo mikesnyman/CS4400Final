@@ -1,47 +1,74 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - We are all Nerds</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />                
-        @Styles.Render("~/Content/css")
-        @Styles.Render("~/Content/bootstrap")
-        @Scripts.Render("~/bundles/modernizr")
-    </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">UVU Behavioral Science Department</p>
-                </div>
-                <div class="float-right">
-                    
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "LoggedIn", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
-        </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - Copywrite</p>
-                </div>
-            </div>
-        </footer>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - We are all Nerds</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript">
+        (function () {
+            window.onload = function () {
+                alert(location.pathname.substring(1));
+                if (location.pathname.substring(1) == "") {
+                    $("#outAbout").show();
+                    $("#outCont").show();
+                    $("#InHom").hide();
+                    $("#InAbout").hide();
+                    $("#InCont").hide();
+                    $("#LogoutBtn").hide();
+                }
+                if (!location.pathname.substring(1) == "") {
+                    $("#outAbout").hide();
+                    $("#outCont").hide();
+                    $("#InHom").show();
+                    $("#InAbout").show();
+                    $("#InCont").show(); 
+                    $("#LogoutBtn").show();
+                }
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-    </body>
+            }
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">UVU Behavioral Science Department</p>
+            </div>
+            <div class="float-right">
+
+                <nav>
+                    <ul id="menu">
+                        <li id="outAbout">@Html.ActionLink("About", "About", "Home")</li>
+                        <li id="outCont">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li id="InHom">@Html.ActionLink("Home", "LoggedIn", "Home")</li>
+                        <li id="InAbout">@Html.ActionLink("About", "About", "Home")</li>
+                        <li id="InCont">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li id="LogoutBtn">@Html.ActionLink("LogOut", "Index", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - Copywrite</p>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
 </html>
